@@ -1,0 +1,12 @@
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/bin/Debug/net10.0/Backend.Domain.deps.json
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/bin/Debug/net10.0/Backend.Domain.dll
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/bin/Debug/net10.0/Backend.Domain.pdb
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.csproj.AssemblyReference.cache
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.AssemblyInfoInputs.cache
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.AssemblyInfo.cs
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.csproj.CoreCompileInputs.cache
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.dll
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/refint/Backend.Domain.dll
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.pdb
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/ref/Backend.Domain.dll
