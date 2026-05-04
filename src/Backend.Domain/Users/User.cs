@@ -1,3 +1,4 @@
+using Backend.Domain.Events;
 using Backend.Domain.Primitives;
 using Backend.Domain.ValueObjects;
 using FluentResults;
@@ -6,9 +7,9 @@ namespace Backend.Domain.Users;
 
 public class User : AggregateRoot
 {
-    public string Username { get; private set; }
-    public HashedPassword Password {get; private set;}
-    public Email Email { get; private set; }
+    public string Username { get; private set; } = null!;
+    public HashedPassword Password {get; private set;} = null!;
+    public Email Email { get; private set; } = null!;
 
     private User() { }
 
@@ -23,14 +24,17 @@ public class User : AggregateRoot
         var merged = Result.Merge(emailResult, hashedPassword);
         if (merged.IsFailed) return merged;
 
-        return Result.Ok(new User
+        User user = new()
         {
             Id = Guid.CreateVersion7(),
             Username = username,
             Password = hashedPassword.Value,
             Email = emailResult.Value,
             CreatedAt = DateTime.UtcNow
-        });
+        };
+
+        user.RaiseDomainEvent(new UserCreatedDomainEvent(user.Id));
+        return Result.Ok(user);
     }
 
     public Result ChangePassword(string newPasswordHash)
@@ -39,7 +43,6 @@ public class User : AggregateRoot
         if (hashedPassword.IsFailed) return Result.Fail(hashedPassword.Errors);
 
         Password = hashedPassword.Value;
-        // RaiseDomainEvent(new UserPasswordChangedDomainEvent(Id));
         return Result.Ok();
     }
 
@@ -49,7 +52,7 @@ public class User : AggregateRoot
         if (result.IsFailed) return Result.Fail(result.Errors);
 
         Email = result.Value;
-        //RaiseDomainEvent(new UserEmailChangedDomainEvent(Id, result.Value));
+        RaiseDomainEvent(new UserEmailChangedDomainEvent(Id, result.Value.Value));
         return Result.Ok();
     }
 }

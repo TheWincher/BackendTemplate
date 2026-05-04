@@ -10,3 +10,4 @@
 /home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/refint/Backend.Domain.dll
 /home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.pdb
 /home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/ref/Backend.Domain.dll
+/home/elouchez/Devs/c#/Backend/src/Backend.Domain/obj/Debug/net10.0/Backend.Domain.sourcelink.json
